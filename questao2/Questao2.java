@@ -7,12 +7,14 @@ public class Questao2
 
 	public static void main(String[] args) 
 	{
+		String senha = "Ya3";
+		System.out.println("Exemplo com a senha: Ya3.\n" + minCh(senha));
 		Scanner scan = new Scanner(System.in);
-		//System.out.print("Digite a senha: ");
-		//String senha = scan.next();
-		String senha = "QWERTY*Uo9";
-		System.out.println(minCh(senha));
-	
+		System.out.println("Digite uma senha: ");
+		String senha2 = scan.next();
+		System.out.println("Resultado: "+ minCh(senha2));
+		
+		
 
 	}
 	
@@ -36,7 +38,7 @@ public class Questao2
 	}
 	
 	
-	public static int verDig(String senha) //Verifica se h· digitos
+	public static int verDig(String senha) //Verifica se h√° digitos
 	{
 			for (int i = 0; i<senha.length(); i++) 
 			{
@@ -47,7 +49,7 @@ public class Questao2
 		return 1;
 	}
 	
-	public static int verUp(String senha) { //verifica se h· caracteres maiusculos
+	public static int verUp(String senha) { //verifica se h√° caracteres maiusculos
 			for (int i = 0; i<senha.length(); i++) 
 			{
 			   char c = senha.charAt(i);
@@ -59,7 +61,7 @@ public class Questao2
 		return 1;
 	}
 	
-	public static int verLow(String senha) { //verifica se h· caracteres minusculos
+	public static int verLow(String senha) { //verifica se h√° caracteres minusculos
 			int num = 0;
 		for (int i = 0; i<senha.length(); i++) 
 			{
@@ -75,7 +77,7 @@ public class Questao2
 	public static int verSpc(String senha) {
 		String especiais = "!@#$%^&*()-+";
 		int num = 0;
-			for (int i = 0; i<senha.length(); i++) //VerificaÁ„o de requisitos
+			for (int i = 0; i<senha.length(); i++) //Verifica√ß√£o de requisitos
 			{
 			   char c = senha.charAt(i);
 			   for(int j=0;j<especiais.length();j++)
